@@ -1,4 +1,19 @@
 import fs from 'node:fs';
+import path from 'node:path';
+
+// Flat HTML preserves the existing extensionless URLs without adding a slash.
+const dist = path.resolve('dist');
+const flattenPrerenderedRoutes = directory => {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    if (entry.isDirectory() && entry.name !== 'assets') flattenPrerenderedRoutes(path.join(directory, entry.name));
+  }
+  const index = path.join(directory, 'index.html');
+  if (directory !== dist && fs.existsSync(index)) {
+    fs.renameSync(index, `${directory}.html`);
+    if (!fs.readdirSync(directory).length) fs.rmdirSync(directory);
+  }
+};
+flattenPrerenderedRoutes(dist);
 
 const config = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
 const preview = process.env.CLOUDFLARE_BUILD_PREVIEW === 'true';
