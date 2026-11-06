@@ -392,7 +392,7 @@
   },
   "cookieConsent": {
     "title": "Votre vie privée compte.",
-    "description": "antl utilise Google Analytics et Vercel Analytics pour mesurer la fréquentation et améliorer ses sites. Ces outils ne sont activés qu’avec votre accord. Vous pouvez le retirer à tout moment depuis « Gérer mes cookies ».",
+    "description": "antl utilise Google Analytics pour mesurer la fréquentation et améliorer ses sites. Cet outil n’est activé qu’avec votre accord. Vous pouvez le retirer à tout moment depuis « Gérer mes cookies ».",
     "accept": "Tout accepter",
     "reject": "Tout refuser",
     "customize": "Personnaliser",
@@ -401,7 +401,7 @@
     "requiredDescription": "Mémorise votre choix de cookies pendant six mois. Le site reste accessible si vous refusez la mesure d’audience.",
     "requiredStatus": "Toujours actif",
     "analyticsLabel": "Mesure d’audience",
-    "analyticsDescription": "Google Analytics et Vercel Analytics mesurent les pages consultées, les parcours et les caractéristiques techniques de la visite. Aucune publicité personnalisée n’est activée.",
+    "analyticsDescription": "Google Analytics mesure les pages consultées, les parcours et les caractéristiques techniques de la visite. Aucune publicité personnalisée n’est activée.",
     "savePreferences": "Enregistrer mes choix",
     "privacyLink": "Confidentialité et cookies",
     "close": "Fermer sans modifier mon choix",
@@ -411,7 +411,7 @@
     "title": "Confidentialité et cookies",
     "paragraphs": [
       "Cette information concerne antl.fr et showcase.antl.fr, édités par antl. Les formulaires du site recueillent les données que vous choisissez de transmettre pour répondre à votre demande ou traiter votre candidature. Pour exercer vos droits d’accès, de rectification, d’effacement, de limitation ou d’opposition, contactez contact@antl.fr. Vous pouvez également adresser une réclamation à la CNIL.",
-      "La mesure d’audience utilise Google Analytics (Google) et Vercel Analytics (Vercel) uniquement après votre consentement. Elle sert à comprendre les pages consultées et les parcours, ainsi que les caractéristiques techniques des visites. Google Analytics utilise des identifiants de navigateur stockés dans des cookies ; Vercel Analytics fournit une mesure d’audience sans cookies. Aucun outil publicitaire ni signal de personnalisation publicitaire Google n’est activé par cette configuration.",
+      "La mesure d’audience utilise Google Analytics (Google) uniquement après votre consentement. Elle sert à comprendre les pages consultées et les parcours, ainsi que les caractéristiques techniques des visites. Google Analytics utilise des identifiants de navigateur stockés dans des cookies. Aucun outil publicitaire ni signal de personnalisation publicitaire Google n’est activé par cette configuration.",
       "Votre acceptation ou votre refus est mémorisé pendant six mois dans le stockage local de votre navigateur, séparément pour chaque site. Les cookies Google Analytics sont configurés avec une durée maximale de 180 jours. Vous pouvez modifier ou retirer votre accord à tout moment avec « Gérer mes cookies » dans le pied de page. Le retrait arrête les outils de mesure et supprime les cookies Google Analytics accessibles à ces sites. Les données déjà collectées ne sont pas effacées automatiquement par le retrait ; contactez antl pour toute demande concernant vos droits.",
       "Le fonctionnement du site et vos préférences de langue ne dépendent pas de l’acceptation des outils de mesure d’audience. Les fournisseurs Google et Vercel peuvent traiter des données en dehors de l’Union européenne ; leurs politiques de confidentialité décrivent leurs traitements et les garanties applicables. Le consentement aux cookies ne vaut pas consentement à recevoir des communications commerciales."
     ],

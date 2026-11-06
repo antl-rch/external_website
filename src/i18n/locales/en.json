@@ -392,7 +392,7 @@
   },
   "cookieConsent": {
     "title": "Your privacy matters.",
-    "description": "antl uses Google Analytics and Vercel Analytics to measure visits and improve its websites. These tools are only enabled with your permission. You can withdraw it at any time using “Manage cookies”.",
+    "description": "antl uses Google Analytics to measure visits and improve its websites. This tool is only enabled with your permission. You can withdraw it at any time using “Manage cookies”.",
     "accept": "Accept all",
     "reject": "Reject all",
     "customize": "Customize",
@@ -401,7 +401,7 @@
     "requiredDescription": "Remembers your cookie choice for six months. The website remains available if you reject audience measurement.",
     "requiredStatus": "Always active",
     "analyticsLabel": "Audience measurement",
-    "analyticsDescription": "Google Analytics and Vercel Analytics measure viewed pages, navigation and technical visit information. Personalized advertising is disabled.",
+    "analyticsDescription": "Google Analytics measures viewed pages, navigation and technical visit information. Personalized advertising is disabled.",
     "savePreferences": "Save my choices",
     "privacyLink": "Privacy and cookies",
     "close": "Close without changing my choice",
@@ -411,7 +411,7 @@
     "title": "Privacy and cookies",
     "paragraphs": [
       "This information applies to antl.fr and showcase.antl.fr, published by antl. Website forms collect the information you choose to provide to answer your enquiry or process your application. To exercise your rights of access, correction, deletion, restriction or objection, contact contact@antl.fr. You may also lodge a complaint with the French data protection authority (CNIL).",
-      "Audience measurement uses Google Analytics (Google) and Vercel Analytics (Vercel) only after your consent. It helps understand viewed pages, navigation and technical visit information. Google Analytics uses browser identifiers stored in cookies; Vercel Analytics provides cookie-free audience measurement. No advertising tools or Google advertising personalization signals are enabled by this configuration.",
+      "Audience measurement uses Google Analytics (Google) only after your consent. It helps understand viewed pages, navigation and technical visit information. Google Analytics uses browser identifiers stored in cookies. No advertising tools or Google advertising personalization signals are enabled by this configuration.",
       "Your acceptance or rejection is stored locally in your browser for six months, separately for each website. Google Analytics cookies are configured with a maximum lifetime of 180 days. You can change or withdraw permission at any time using “Manage cookies” in the footer. Withdrawal stops measurement tools and deletes Google Analytics cookies accessible to these websites. Previously collected data is not automatically erased by withdrawal; contact antl with requests concerning your rights.",
       "Website functionality and language preferences do not depend on accepting audience measurement. Google and Vercel may process data outside the European Union; their privacy policies describe their processing and applicable safeguards. Cookie consent is not consent to receive marketing communications."
     ],

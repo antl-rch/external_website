@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { downloadLegacyAssets } from './restore-legacy-assets.mjs';
 
 // Flat HTML preserves the existing extensionless URLs without adding a slash.
 const dist = path.resolve('dist');
@@ -14,6 +15,9 @@ const flattenPrerenderedRoutes = directory => {
   }
 };
 flattenPrerenderedRoutes(dist);
+const legacy = JSON.parse(fs.readFileSync(new URL('./legacy-assets.json', import.meta.url), 'utf8'));
+await downloadLegacyAssets(legacy, dist);
+
 
 const config = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
 const preview = process.env.CLOUDFLARE_BUILD_PREVIEW === 'true';
@@ -29,3 +33,5 @@ const blocks = (config.headers ?? []).map(rule => {
 blocks.push('/index.html\n  Cache-Control: no-cache');
 fs.writeFileSync('dist/_headers', `${blocks.join('\n\n')}\n`);
 console.log(`Cloudflare headers prepared from versioned configuration (${preview ? 'preview' : 'production'}).`);
+
+fs.writeFileSync('dist/_redirects', 'https://www.antl.fr/* https://antl.fr/:splat 301\n');
