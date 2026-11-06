@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm test && tsc -b && vite build --outDir dist/static && vite build --ssr src/entry-server.tsx --outDir dist/server && node prerender.js",
+    "build:cloudflare": "npm run build && node scripts/cloudflare-build.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "node --test tests/cookie-consent.test.mjs"

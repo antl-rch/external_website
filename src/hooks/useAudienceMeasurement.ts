@@ -9,5 +9,5 @@ export function useAudienceMeasurement() {
     else stopAnalytics();
   }, [status]);
   const beforeSend = (event: BeforeSendEvent) => isAnalyticsEnabled() ? { ...event, url: publicPageUrl(event.url) } : null;
-  return { allowed: status === "accepted", beforeSend };
+  return { allowed: status === "accepted" && import.meta.env.VITE_HOSTING_PLATFORM !== "cloudflare", beforeSend };
 }
