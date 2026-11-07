@@ -20,18 +20,21 @@ await downloadLegacyAssets(legacy, dist);
 
 
 const config = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
-const preview = process.env.CLOUDFLARE_BUILD_PREVIEW === 'true';
 const blocks = (config.headers ?? []).map(rule => {
   const pattern = rule.source.replace('(.*)', '*');
   if (/[()]/.test(pattern)) throw new Error('Unsupported Cloudflare header route');
   const headers = Object.fromEntries(rule.headers.map(header => [header.key, header.value]));
-  if (preview && pattern === '/*') headers['X-Robots-Tag'] = 'noindex, nofollow';
-  const lines = [pattern, ...Object.entries(headers).map(([key, value]) => `  ${key}: ${value}`)];
-  if (lines.some(line => line.length > 2000)) throw new Error('Cloudflare header exceeds supported length');
-  return lines.join('\n');
+  const robots = headers['X-Robots-Tag'];
+  delete headers['X-Robots-Tag'];
+  const routes = [pattern, ...Object.entries(headers).map(([key, value]) => `  ${key}: ${value}`)];
+  if (robots) routes.push('', `https://antl.fr${pattern}`, `  X-Robots-Tag: ${robots}`);
+  if (routes.some(line => line.length > 2000)) throw new Error('Cloudflare header exceeds supported length');
+  return routes.join('\n');
 });
+blocks.push('https://:project.pages.dev/*\n  X-Robots-Tag: noindex, nofollow');
+blocks.push('https://:version.:project.pages.dev/*\n  X-Robots-Tag: noindex, nofollow');
 blocks.push('/index.html\n  Cache-Control: no-cache');
 fs.writeFileSync('dist/_headers', `${blocks.join('\n\n')}\n`);
-console.log(`Cloudflare headers prepared from versioned configuration (${preview ? 'preview' : 'production'}).`);
+console.log('Cloudflare headers prepared for the public domain and preview hosts.');
 
 fs.writeFileSync('dist/_redirects', 'https://www.antl.fr/* https://antl.fr/:splat 301\n');
