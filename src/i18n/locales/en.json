@@ -383,7 +383,7 @@
     "companyInfo": "antl is a simplified joint-stock company with a capital of €20,000.00, registered with the La Rochelle Trade and Companies Register under n° 104 768 056 00012, with its registered office at 48b avenue Charles de Gaulle, 17300 Rochefort, France. VAT number: FR27104768056. antl is represented by Ms. Nelly Ahobaut, its President.",
     "activity": "antl is a private establishment specializing in customer relations.",
     "director": "The Director of Publication for the platform and the Director of the Private Establishment is Ms. Nelly Ahobaut.",
-    "hosting": "The site is hosted by Vercel.inc: 440 N Barranca Avenue #4133, Covina, CA 91723 United States",
+    "hosting": "The site is hosted on Cloudflare Pages by Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, United States.",
     "contactTitle": "Contact us",
     "contactPhone": "By phone: +33 5 86 22 00 09",
     "contactEmail": "By email: contact@antl.fr",
@@ -413,9 +413,9 @@
       "This information applies to antl.fr and showcase.antl.fr, published by antl. Website forms collect the information you choose to provide to answer your enquiry or process your application. To exercise your rights of access, correction, deletion, restriction or objection, contact contact@antl.fr. You may also lodge a complaint with the French data protection authority (CNIL).",
       "Audience measurement uses Google Analytics (Google) only after your consent. It helps understand viewed pages, navigation and technical visit information. Google Analytics uses browser identifiers stored in cookies. No advertising tools or Google advertising personalization signals are enabled by this configuration.",
       "Your acceptance or rejection is stored locally in your browser for six months, separately for each website. Google Analytics cookies are configured with a maximum lifetime of 180 days. You can change or withdraw permission at any time using “Manage cookies” in the footer. Withdrawal stops measurement tools and deletes Google Analytics cookies accessible to these websites. Previously collected data is not automatically erased by withdrawal; contact antl with requests concerning your rights.",
-      "Website functionality and language preferences do not depend on accepting audience measurement. Google and Vercel may process data outside the European Union; their privacy policies describe their processing and applicable safeguards. Cookie consent is not consent to receive marketing communications."
+      "Website functionality and language preferences do not depend on accepting audience measurement. Cloudflare provides hosting and Google provides audience measurement. These providers may process data outside the European Union. Their privacy policies describe their processing and applicable safeguards. Cookie consent is not consent to receive marketing communications."
     ],
     "google": "Google privacy policy",
-    "vercel": "Vercel privacy policy"
+    "cloudflare": "Cloudflare privacy policy"
   }
 }

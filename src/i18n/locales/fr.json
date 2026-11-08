@@ -383,7 +383,7 @@
     "companyInfo": "La société antl est une société par actions simplifiée au capital de 20 000,00 euros, immatriculée au Registre du Commerce et des Sociétés de La Rochelle sous le n° 104 768 056 00012 et dont le siège social est situé au 48b avenue Charles de Gaulle, 17300 Rochefort, France. Numéro de TVA intracommunautaire : FR27104768056. antl est représentée par Mme. Nelly Ahobaut, sa Présidente.",
     "activity": "antl est un établissement privé spécialiste de la relation client.",
     "director": "La Directrice de la Publication de la plateforme et la Directrice de l'Établissement Privé est Mme. Nelly Ahobaut.",
-    "hosting": "Le site est hébergé par Vercel.inc : 440 N Barranca Avenue #4133, Covina, CA 91723 United States",
+    "hosting": "Le site est hébergé sur Cloudflare Pages par Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, États-Unis.",
     "contactTitle": "Nous contacter",
     "contactPhone": "Par téléphone : +33 5 86 22 00 09",
     "contactEmail": "Par email : contact@antl.fr",
@@ -413,9 +413,9 @@
       "Cette information concerne antl.fr et showcase.antl.fr, édités par antl. Les formulaires du site recueillent les données que vous choisissez de transmettre pour répondre à votre demande ou traiter votre candidature. Pour exercer vos droits d’accès, de rectification, d’effacement, de limitation ou d’opposition, contactez contact@antl.fr. Vous pouvez également adresser une réclamation à la CNIL.",
       "La mesure d’audience utilise Google Analytics (Google) uniquement après votre consentement. Elle sert à comprendre les pages consultées et les parcours, ainsi que les caractéristiques techniques des visites. Google Analytics utilise des identifiants de navigateur stockés dans des cookies. Aucun outil publicitaire ni signal de personnalisation publicitaire Google n’est activé par cette configuration.",
       "Votre acceptation ou votre refus est mémorisé pendant six mois dans le stockage local de votre navigateur, séparément pour chaque site. Les cookies Google Analytics sont configurés avec une durée maximale de 180 jours. Vous pouvez modifier ou retirer votre accord à tout moment avec « Gérer mes cookies » dans le pied de page. Le retrait arrête les outils de mesure et supprime les cookies Google Analytics accessibles à ces sites. Les données déjà collectées ne sont pas effacées automatiquement par le retrait ; contactez antl pour toute demande concernant vos droits.",
-      "Le fonctionnement du site et vos préférences de langue ne dépendent pas de l’acceptation des outils de mesure d’audience. Les fournisseurs Google et Vercel peuvent traiter des données en dehors de l’Union européenne ; leurs politiques de confidentialité décrivent leurs traitements et les garanties applicables. Le consentement aux cookies ne vaut pas consentement à recevoir des communications commerciales."
+      "Le fonctionnement du site et vos préférences de langue ne dépendent pas de l’acceptation des outils de mesure d’audience. Cloudflare assure l’hébergement et Google fournit la mesure d’audience. Ces prestataires peuvent traiter des données en dehors de l’Union européenne. Leurs politiques de confidentialité décrivent leurs traitements et les garanties applicables. Le consentement aux cookies ne vaut pas consentement à recevoir des communications commerciales."
     ],
     "google": "Confidentialité Google",
-    "vercel": "Confidentialité Vercel"
+    "cloudflare": "Confidentialité Cloudflare"
   }
 }

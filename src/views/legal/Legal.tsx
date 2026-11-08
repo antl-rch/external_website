@@ -39,7 +39,7 @@ export default function Legal(): ReactElement {
           <div className="legalContent">
             <h2 id="privacy-heading">{t("privacy.title")}</h2>
             {[0, 1, 2, 3].map(index => <p key={index}>{t(`privacy.paragraphs.${index}`)}</p>)}
-            <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">{t("privacy.google")}</a> · <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">{t("privacy.vercel")}</a></p>
+            <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">{t("privacy.google")}</a> · <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">{t("privacy.cloudflare")}</a></p>
             <button type="button" className="cookie-settings-button" onClick={openPreferences}>{t("cookieConsent.settings")}</button>
           </div>
         </section>
