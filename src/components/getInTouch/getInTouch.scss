@@ -54,6 +54,15 @@
   border: 1px solid rgba(37, 99, 235, 0.1);
 }
 
+#getInTouchComponent .contactWebsiteField {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  pointer-events: none;
+}
+
 #getInTouchComponent .formGroup {
   display: flex;
   flex-flow: column nowrap;

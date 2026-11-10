@@ -1,11 +1,11 @@
 import "./getInTouch.scss";
 
 import type { ReactElement } from "react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 // import { FaXTwitter } from "react-icons/fa6";
-import { sendContactEmail } from "../../services/api.service";
+import { loadContactChallenge, sendContactEmail } from "../../services/api.service";
 
 export default function GetInTouch(): ReactElement {
   const { t } = useTranslation();
@@ -17,6 +17,12 @@ export default function GetInTouch(): ReactElement {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const pendingChallenge = useRef<ReturnType<typeof loadContactChallenge> | null>(null);
+
+  function prepareChallenge() {
+    pendingChallenge.current ??= loadContactChallenge();
+    return pendingChallenge.current;
+  }
 
   function handleInputChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const { name, value } = event.target;
@@ -28,10 +34,12 @@ export default function GetInTouch(): ReactElement {
     });
   }
 
-  async function handleSubmit(event: React.FormEvent) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!isFormValid()) return;
+    if (!isFormValid() || isSubmitting) return;
 
+    const form = event.currentTarget;
+    const website = String(new FormData(form).get('website') ?? '');
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
@@ -39,10 +47,13 @@ export default function GetInTouch(): ReactElement {
       company: formData.companyName,
       email: formData.email,
       phone: formData.phone,
-      message: formData.message
-    });
+      message: formData.message,
+      website,
+    }, prepareChallenge());
+    pendingChallenge.current = null;
 
     if (success) {
+      form.reset();
       setSubmitStatus('success');
       setFormData({
         companyName: "",
@@ -81,7 +92,11 @@ export default function GetInTouch(): ReactElement {
       </header>
 
       <div className="getInTouchContent">
-        <form className="contactForm" onSubmit={handleSubmit}>
+        <form className="contactForm" onSubmit={handleSubmit} onFocus={prepareChallenge} aria-busy={isSubmitting}>
+          <div className="contactWebsiteField" aria-hidden="true">
+            <label htmlFor="contact-website">Site web</label>
+            <input id="contact-website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+          </div>
           <div className="formGroup">
             <label htmlFor="companyName">{t("getInTouch.form.company")}</label>
             <input
@@ -143,10 +158,10 @@ export default function GetInTouch(): ReactElement {
               <span className="buttonArrow">→</span>
             </button>
             {submitStatus === "success" && (
-              <p className="successMessage">{t("getInTouch.form.success")}</p>
+              <p className="successMessage" role="status">{t("getInTouch.form.success")}</p>
             )}
             {submitStatus === "error" && (
-              <p className="errorMessage">{t("getInTouch.form.error")}</p>
+              <p className="errorMessage" role="alert">{t("getInTouch.form.error")}</p>
             )}
           </div>
         </form>
